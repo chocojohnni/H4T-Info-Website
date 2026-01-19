@@ -1,0 +1,82 @@
+.songListR {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0f0f0, #d9e4f5);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.songR {
+    padding: 20px;
+    margin: 15px 0;
+    border-bottom: 1px solid #ccc;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.songR:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.songR img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.songRInfo {
+    text-align: left;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Adjusting edit section */
+.editSection {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 6px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+input, select {
+    padding: 6px;
+    margin-top: 6px;
+    width: 85%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: border 0.2s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+}

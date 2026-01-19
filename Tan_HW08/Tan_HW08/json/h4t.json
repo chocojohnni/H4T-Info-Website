@@ -1,0 +1,60 @@
+[
+    {
+        "songTitle": "Drama",
+        "image": "https://i.ytimg.com/vi/XJdbwkKladQ/sddefault.jpg",
+        "songArtist": "Aespa",
+        "people": "8",
+        "officeMembers": "4",
+        "teamH": "6",
+        "teamT": "2"
+    
+    },
+
+    {
+
+        "songTitle": "Sticker",
+        "image": "https://i.ytimg.com/vi/LW7-7RmygVA/hqdefault.jpg",
+        "songArtist": "NCT 127",
+        "people": "8",
+        "officeMembers": "3",
+        "teamH": "5",
+        "teamT": "3"
+    
+    },
+
+    {
+
+        "songTitle": "Smoothie",
+        "image": "https://i.ytimg.com/vi/uXyAkg25MyM/hqdefault.jpg",
+        "songArtist": "NCT Dream",
+        "people": "7",
+        "officeMembers": "1",
+        "teamH": "4",
+        "teamT": "3"
+    
+    },
+
+    {
+
+        "songTitle": "Puppet Show",
+        "image": "https://i.ytimg.com/vi/1Fk4GSOQqWU/hqdefault.jpg",
+        "songArtist": "XG",
+        "people": "7",
+        "officeMembers": "2",
+        "teamH": "4",
+        "teamT": "3"
+    
+    },
+
+    {
+        
+        "songTitle": "Fact Check",
+        "image": "https://i.ytimg.com/vi/k9l6kJVLz9w/hqdefault.jpg",
+        "songArtist": "NCT 127",
+        "people": "8",
+        "officeMembers": "3",
+        "teamH": "6",
+        "teamT": "2"
+    
+    }
+]

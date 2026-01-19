@@ -1,0 +1,46 @@
+[
+    {
+        "dptName": "Talent Mangement Department",
+        "people": 3,
+        "dptProjectManager": "Michelle Zeng",
+        "dptHead": "Sarah Phan",
+        "dptOperator": "Lili Pan",
+        "image": "https://thumbs.dreamstime.com/b/professional-icon-representing-talent-management-business-352796878.jpg"
+    },
+
+    {
+        "dptName": "Administrative Support Department",
+        "people": 3,
+        "dptProjectManager": "Ryan Thach",
+        "dptHead": "Sarah Peng",
+        "dptOperator": "Mel Tonogbanua",
+        "image": "https://static.vecteezy.com/system/resources/previews/000/095/815/non_2x/administrative-assistant-vector-cartoons.jpg"
+    },
+
+    {
+        "dptName": "Content & Marketing Department",
+        "people": 3,
+        "dptProjectManager": "Michelle Wu",
+        "dptHead": "Joyce Huang",
+        "dptOperator": "Ada Cun",
+        "image": "https://www.shutterstock.com/image-vector/tiny-characters-creating-content-copywriting-260nw-1999646879.jpg"
+    },
+
+    {
+        "dptName": "H Department",
+        "people": 3,
+        "dptProjectManager": "Benjamin Chau",
+        "dptHead": "Johnny Tan",
+        "dptOperator": "Brandon Le",
+        "image": "https://static.vecteezy.com/system/resources/previews/008/778/091/non_2x/sticker-of-a-cartoon-letter-h-vector.jpg"
+    },
+
+    {
+        "dptName": "T Department",
+        "people": 3,
+        "dptProjectManager": "Phu Dang",
+        "dptHead": "Brian Nguyen",
+        "dptOperator": "Sopheara Eam",
+        "image": "https://cdn.vectorstock.com/i/500p/88/11/cartoon-letter-t-red-alphabet-vector-54818811.jpg"
+    }
+]

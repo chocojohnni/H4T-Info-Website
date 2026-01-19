@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- HTML comments like this... -->
+<html>
+
+<head>
+    <title>Title Nav Using Flexbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/dropDown.css" rel="stylesheet" type="text/css" />
+    <link href="style/myDropDown.css" rel="stylesheet" type="text/css" />
+    <link href="style/usersComingSoon.css" rel="stylesheet" type="text/css" />
+    <link href="style/home.css" rel="stylesheet" type="text/css" />
+    <link href="style/blog.css" rel="stylesheet" type="text/css" />
+    <link href="style/obj.css" rel="stylesheet" type="text/css" />
+    <link href="style/song.css" rel="stylesheet" type="text/css" />
+    <link href="style/songR.css" rel="stylesheet" type="text/css" />
+    <link href="style/slideshow.css" rel="stylesheet" type="text/css" />
+    <link href="style/songListR.css" rel="stylesheet" type="text/css" />
+    <link href="style/editArea.css" rel="stylesheet" type="text/css" />
+
+    <!-- You need these two CDNs to use react, their version numbers must match -->
+    <!-- changed version on 10-20-2022 from 16.3.1 to 18 for react and react-dom -->
+    <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
+
+    <!-- This CDN lets you use JSX (looks like HTML tags in JS) -->
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+
+    <!-- This CDN lets you use React Routing -->
+    <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Put JS reusable first (these are called by CGFs or by the page like the dropDown FW). -->
+    <script src="_JS_reusable/dropDownFW.js"></script>
+    <script src="_JS_reusable/MakeObj.js"></script>
+    <script src="_JS_reusable/MakeSong.js"></script>
+    <script src="_JS_reusable/MakeSlideShow.js"></script>
+    <script src="_JS_reusable/MakeSongList.js"></script>
+    <script src="_JS_reusable/MakeEditArea.js"></script>
+    <script src="_JS_reusable/MakeTag.js"></script>
+    <script src="_JS_reusable/Validate.js"></script>
+    <script src="js/ajax.js"></script>
+
+    <!-- JS Content Generating functions (these are called by the router). -->
+    <script src="_JS_CGF/UsersComingSoonJS.js"></script>
+    <script src="_JS_CGF/MakeObj_CGF.js"></script>
+    <script src="_JS_CGF/MakeSong_CGF.js"></script>
+    <script src="_JS_CGF/MakeSongList_CGF.js"></script>
+    <script src="js/SlideShow_AJAX_CGF.js"></script>
+    <script src="_JS_CGF/DptEditArea_CGF.js"></script>
+    <script src="_JS_CGF/SongEditArea_CGF.js"></script>
+    <script src="_JS_CGF/twoEditAreas_CGF.js"></script>
+
+    <!-- React reusable (these are called by CGFs). -->
+    <script type="text/babel" src="_React_reusable/ConvertEle.js"></script>
+    <script type="text/babel" src="_React_reusable/MakeSongR.js"></script>
+    <script type="text/babel" src="_React_reusable/MakeSongListR.js"></script>
+
+    <!-- React Content Generating functions (these are called by the router) -->
+    <script type="text/babel" src="_React_CGF/BlogR.js"></script>
+    <script type="text/babel" src="_React_CGF/HomeR.js"></script>
+    <script type="text/babel" src="_React_CGF/UsersComingSoonR.js"></script>
+    <script type="text/babel" src="_React_CGF/MakeSongR_CGF.js"></script>
+    <script type="text/babel" src="_React_CGF/SongListR_CGF.js"></script>
+    <script type="text/babel" src="_React_CGF/Song1ListR_CGF.js"></script>
+    <script type="text/babel" src="_React_CGF/Song2ListR_CGF.js"></script>
+
+    <!-- Any React scripts (which all have JSX) needs script type="text/babel" -->
+
+
+    <script type="text/babel">
+
+        "use strict";
+
+        dropDownFW({
+            dropHeaderStyle: "dropHeader",
+            dropContentStyle: "dropContent",
+            showStyle: "show",
+            hideStyle: "hide"
+        });
+
+        const Link = ReactRouterDOM.Link;
+        const Route = ReactRouterDOM.Route;
+
+        const AjaxSlideShow = () => {
+        React.useEffect(() => {
+          const container = document.getElementById("ajaxContent");
+          if (container) {
+            container.appendChild(SlideShow_AJAX_CGF());
+          }
+        }, []);
+        return (
+          <div className="ajaxSlideShow">
+            <h2>H4T Slidehow</h2>
+            <div id="ajaxContent"></div>
+          </div>
+        );
+      };
+
+        const App = () => (
+            <ReactRouterDOM.HashRouter>
+
+                <div id="titleNav">
+                    <div id="title">
+                        H4T
+                    </div>
+                    <div id="nav">
+                        <div class="dropDown">
+                            <Link to="/home">Home</Link>
+                        </div>
+                        
+                        <div class="dropDown">
+                            <div class="dropHeader">Search-JS</div>
+                            <div class="dropContent">
+                                <Link to="/ajaxSlides">AJAX SlideShow</Link><br />
+                                <Link to="/mySongs">Song Objects (JS)</Link> <br />
+                                <Link to="/mySongsList">Song List Component</Link> <br />
+                                <Link to="/myTwoEditAreas">Song & Department Edit Areas</Link> <br />
+                            </div>
+                        </div>
+
+                        <div class="dropDown">
+                            <div class="dropHeader">Search-React</div>
+                            <div class="dropContent">
+                                <Link to="/mySongsR">Song Objects (React)</Link> <br />
+                                <Link to="/mySongsListR">React Song List Component</Link> <br />
+                            </div>
+                        </div>
+
+                        <div class="dropDown">
+                            <Link to="/blog">Blog</Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <Route path="/" exact component={HomeR} />
+                    <Route path="/home" component={HomeR} />
+                    <Route path="/myUsersJS" component={ () => <ConvertEle ele={UsersComingSoonJS()} />  } />
+                    <Route path="/mySongs" component={() => <ConvertEle ele={MakeSong_CGF()} />} />
+                    <Route path="/mySongsList" component={() => <ConvertEle ele={MakeSongList_CGF()} />} />
+                    <Route path="/myTwoEditAreas" component={() => <ConvertEle ele={twoEditAreas_CGF()} />} />
+                    <Route path="/mySongsR" component={MakeSongR_CGF} />
+                    <Route path="/blog" component={BlogR} />
+                    <Route path="/ajaxSlides" component={AjaxSlideShow} />
+                    <Route path="/mySongsListR" component={SongListR_CGF} />
+                </div>
+
+                <div id="footer">
+                    Johnny Tan
+                </div>
+
+            </ReactRouterDOM.HashRouter>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+.home {
+    font-size: 1.5rem;
+    line-height: 2rem; 
+}
+
+.home h4 {
+    background-color:yellow;
+    text-align:center;
+    margin-top:1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.home .hero {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    font-weight: bold;
+    text-align:center;
+}
+
+#pics {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    align-items: flex-start;
+
+}
+
+#content img { 
+
+    border-radius: 0.5rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0); 
+
+}
+
+@media (max-width: 38rem) { 
+
+    #pics {
+
+        flex-direction: column;
+        text-align: center;
+        gap: 0rem;
+
+    }
+
+    #content img {
+
+        width: 70%;
+        max-width: none;
+        
+    }
+
+    #nav {
+
+        display: flex;
+        flex-direction: row;
+        padding-top: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+}
